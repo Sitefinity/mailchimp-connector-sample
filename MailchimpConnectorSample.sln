@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.Sitefinity.MailchimpConnector", "Telerik.Sitefinity.MailchimpConnector\Telerik.Sitefinity.MailchimpConnector.csproj", "{B943491D-46EC-456B-BB0C-71F253379CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.Sitefinity.MailchimpConnector.UnitTests", "Telerik.Sitefinity.MailchimpConnector.UnitTests\Telerik.Sitefinity.MailchimpConnector.UnitTests.csproj", "{31E74CB6-4233-4026-B59A-B30D0C131E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityWebApp", "SitefinityWebApp\SitefinityWebApp.csproj", "{64A03633-1683-4E6C-B643-A3A5EB44A283}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release Pro|Any CPU = Release Pro|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B943491D-46EC-456B-BB0C-71F253379CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B943491D-46EC-456B-BB0C-71F253379CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B943491D-46EC-456B-BB0C-71F253379CFB}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
+		{B943491D-46EC-456B-BB0C-71F253379CFB}.Release Pro|Any CPU.Build.0 = Release|Any CPU
+		{B943491D-46EC-456B-BB0C-71F253379CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B943491D-46EC-456B-BB0C-71F253379CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E74CB6-4233-4026-B59A-B30D0C131E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E74CB6-4233-4026-B59A-B30D0C131E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E74CB6-4233-4026-B59A-B30D0C131E72}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
+		{31E74CB6-4233-4026-B59A-B30D0C131E72}.Release Pro|Any CPU.Build.0 = Release|Any CPU
+		{31E74CB6-4233-4026-B59A-B30D0C131E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E74CB6-4233-4026-B59A-B30D0C131E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64A03633-1683-4E6C-B643-A3A5EB44A283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64A03633-1683-4E6C-B643-A3A5EB44A283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64A03633-1683-4E6C-B643-A3A5EB44A283}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
+		{64A03633-1683-4E6C-B643-A3A5EB44A283}.Release Pro|Any CPU.Build.0 = Release|Any CPU
+		{64A03633-1683-4E6C-B643-A3A5EB44A283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64A03633-1683-4E6C-B643-A3A5EB44A283}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A77949DE-1493-4935-A7DD-65078D41608C}
+	EndGlobalSection
+EndGlobal
