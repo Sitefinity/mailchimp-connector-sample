@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Telerik.Sitefinity.MailchimpConnector.UnitTests")]
-[assembly: AssemblyCopyright("Copyright © 2005-2018 Telerik AD. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2018 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
