@@ -1,5 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SitefinityWebApp</RootNamespace>
     <AssemblyName>SitefinityWebApp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -24,7 +24,8 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <EnhancerAssembly>$(SolutionDir)\packages\Telerik.DataAccess.Fluent.2018.0.911.1\tools\enhancer\enhancer.exe</EnhancerAssembly>
+    <TargetFrameworkProfile />
+    <EnhancerAssembly>$(SolutionDir)\packages\Telerik.DataAccess.Fluent.2018.0.1127.1\tools\enhancer\enhancer.exe</EnhancerAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,16 +46,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=3.0.20820.16598, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.16598, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e">
       <HintPath>..\packages\AjaxControlToolkit.3.0.20820.0\lib\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="AmazingCloudSearch, Version=1.0.0.1, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+    <Reference Include="AmazingCloudSearch, Version=1.0.0.1, Culture=neutral, PublicKeyToken=b28c218413bdf563">
       <HintPath>..\packages\Telerik.Sitefinity.CloudSearch.1.0.0\lib\AmazingCloudSearch.dll</HintPath>
     </Reference>
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
-    <Reference Include="AntiXssLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+    <Reference Include="AntiXssLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f">
       <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -63,34 +64,40 @@
     <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="AWSSDK, Version=2.3.52.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
+    <Reference Include="AWSSDK, Version=2.3.52.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3">
       <HintPath>..\packages\AWSSDK.2.3.52.0\lib\net45\AWSSDK.dll</HintPath>
     </Reference>
+    <Reference Include="AWSSDK.CloudSearch, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.CloudSearch.3.3.0.83\lib\net45\AWSSDK.CloudSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudSearchDomain, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.CloudSearchDomain.3.3.0.83\lib\net45\AWSSDK.CloudSearchDomain.dll</HintPath>
+    </Reference>
     <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\packages\AWSSDK.Core.3.3.22\lib\net45\AWSSDK.Core.dll</HintPath>
+      <HintPath>..\packages\AWSSDK.Core.3.3.103.43\lib\net45\AWSSDK.Core.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.DynamoDBv2, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\packages\AWSSDK.DynamoDBv2.3.3.7.2\lib\net45\AWSSDK.DynamoDBv2.dll</HintPath>
+      <HintPath>..\packages\AWSSDK.DynamoDBv2.3.3.101.70\lib\net45\AWSSDK.DynamoDBv2.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\packages\AWSSDK.S3.3.3.18.1\lib\net45\AWSSDK.S3.dll</HintPath>
+      <HintPath>..\packages\AWSSDK.S3.3.3.104.31\lib\net45\AWSSDK.S3.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.SQS, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\packages\AWSSDK.SQS.3.3.3.6\lib\net45\AWSSDK.SQS.dll</HintPath>
+      <HintPath>..\packages\AWSSDK.SQS.3.3.102.11\lib\net45\AWSSDK.SQS.dll</HintPath>
     </Reference>
-    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
-      <HintPath>..\packages\CsvHelper.2.2.2\lib\net40-client\CsvHelper.dll</HintPath>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823">
+      <HintPath>..\packages\CsvHelper.2.2.2\lib\net20\CsvHelper.dll</HintPath>
     </Reference>
-    <Reference Include="DDay.Collections, Version=1.0.2.25679, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+    <Reference Include="DDay.Collections, Version=1.0.2.25679, Culture=neutral, PublicKeyToken=b28c218413bdf563">
       <HintPath>..\packages\Telerik.Sitefinity.DDay.iCal.Signed.1.0.2.2\lib\DDay.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="DDay.iCal, Version=1.0.2.25718, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+    <Reference Include="DDay.iCal, Version=1.0.2.25718, Culture=neutral, PublicKeyToken=b28c218413bdf563">
       <HintPath>..\packages\Telerik.Sitefinity.DDay.iCal.Signed.1.0.2.2\lib\DDay.iCal.dll</HintPath>
     </Reference>
-    <Reference Include="DirectShowLib-2005, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+    <Reference Include="DirectShowLib-2005, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f">
       <HintPath>..\packages\DirectShowLib-2005.2.1.0.0\lib\DirectShowLib-2005.dll</HintPath>
     </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="Elasticsearch.Net, Version=5.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
@@ -99,13 +106,13 @@
     <Reference Include="Enyim.Caching, Version=2.16.0.0, Culture=neutral, PublicKeyToken=cec98615db04012e, processorArchitecture=MSIL">
       <HintPath>..\packages\EnyimMemcached.2.16.0\lib\net35\Enyim.Caching.dll</HintPath>
     </Reference>
-    <Reference Include="Html2Amp, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+    <Reference Include="Html2Amp, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
       <HintPath>..\packages\Progress.Sitefinity.HtmlToAmp.1.1.0.0\lib\net45\Html2Amp.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+    <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f">
       <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
     <Reference Include="HtmlSanitizer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=61c49a1a9e79cc28, processorArchitecture=MSIL">
@@ -114,16 +121,16 @@
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="IdentityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+    <Reference Include="IdentityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
       <HintPath>..\packages\Progress.Sitefinity.IdentityModel.1.3.0\lib\net45\IdentityModel.dll</HintPath>
     </Reference>
-    <Reference Include="IdentityServer3, Version=2.6.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.IdentityServer3.1.3.1\lib\net45\IdentityServer3.dll</HintPath>
+    <Reference Include="IdentityServer3, Version=2.6.0.1, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.IdentityServer3.1.3.5\lib\net45\IdentityServer3.dll</HintPath>
     </Reference>
-    <Reference Include="IdentityServer3.AccessTokenValidation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+    <Reference Include="IdentityServer3.AccessTokenValidation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
       <HintPath>..\packages\Progress.Sitefinity.IdentityServer3.AccessTokenValidation.1.3.0\lib\net45\IdentityServer3.AccessTokenValidation.dll</HintPath>
     </Reference>
-    <Reference Include="LinqToTwitter, Version=2.1.9.0, Culture=neutral, PublicKeyToken=957107be965c25d9, processorArchitecture=MSIL">
+    <Reference Include="LinqToTwitter, Version=2.1.9.0, Culture=neutral, PublicKeyToken=957107be965c25d9">
       <HintPath>..\packages\linqtotwitterNET40.2.1.9.0\lib\net40\LinqToTwitter.dll</HintPath>
     </Reference>
     <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
@@ -165,7 +172,10 @@
     <Reference Include="MaxMind.GeoIP2, Version=2.6.0.0, Culture=neutral, PublicKeyToken=66afa4cc5ae853ac, processorArchitecture=MSIL">
       <HintPath>..\packages\MaxMind.GeoIP2.2.10.0\lib\net45\MaxMind.GeoIP2.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.AspNet.OData, Version=7.1.0.21120, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.OData.7.1.0\lib\net45\Microsoft.AspNet.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.Search, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -180,8 +190,8 @@
     <Reference Include="Microsoft.Azure.Search.Service, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Azure.Search.Service.5.0.0\lib\net452\Microsoft.Azure.Search.Service.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -193,23 +203,23 @@
     <Reference Include="Microsoft.Data.Services.Client, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Http, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Http, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.Http.1.0.0.0\lib\Microsoft.Http.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Protocol.Extensions, Version=1.0.2.33, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Protocol.Extensions.1.0.2.206221351\lib\net45\Microsoft.IdentityModel.Protocol.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.OData.Core, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.OData.Core.7.2.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Core.dll</HintPath>
+    <Reference Include="Microsoft.OData.Core, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.7.5.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.OData.Edm, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.OData.Edm.7.2.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Edm.dll</HintPath>
+    <Reference Include="Microsoft.OData.Edm, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.5.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Edm.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
@@ -265,14 +275,14 @@
     <Reference Include="Microsoft.Rest.ClientRuntime.Azure, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Rest.ClientRuntime.Azure.3.3.12\lib\net452\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <HintPath>..\packages\Microsoft.SharePoint.Client.15.0.4569.1000\lib\Microsoft.SharePoint.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <HintPath>..\packages\Microsoft.SharePoint.Client.15.0.4569.1000\lib\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Spatial, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Spatial.7.2.0\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+    <Reference Include="Microsoft.Spatial, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.5.0\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.10.50.1600.1\lib\Net20\Microsoft.SqlServer.Types.dll</HintPath>
@@ -280,25 +290,25 @@
     <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Administration.7.0.0.0\lib\net20\Microsoft.Web.Administration.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Sitefinity.Windows.Azure.2.0.0.4\lib\net40\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Sitefinity.Windows.Azure.2.0.0.4\lib\net40\Microsoft.WindowsAzure.ServiceRuntime.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Storage, Version=5.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=5.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\WindowsAzure.Storage.5.0.2\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Sitefinity.Windows.Azure.2.0.0.4\lib\net40\Microsoft.WindowsAzure.StorageClient.dll</HintPath>
     </Reference>
-    <Reference Include="MonAgentListener, Version=33.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="MonAgentListener, Version=33.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Sitefinity.Windows.Azure.2.0.0.4\lib\net40\MonAgentListener.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.6.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+    <Reference Include="MySql.Data, Version=6.6.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
       <HintPath>..\packages\MySql.Data.6.6.6\lib\net40\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Nest, Version=5.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
@@ -307,8 +317,8 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
@@ -316,58 +326,68 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Owin.Security.Providers.GitHub, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.Owin.Security.Providers.1.3.0\lib\net45\Owin.Security.Providers.GitHub.dll</HintPath>
+    <Reference Include="Owin.Security.Providers.GitHub, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.Owin.Security.Providers.1.3.1\lib\net45\Owin.Security.Providers.GitHub.dll</HintPath>
     </Reference>
-    <Reference Include="Owin.Security.Providers.LinkedIn, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.Owin.Security.Providers.1.3.0\lib\net45\Owin.Security.Providers.LinkedIn.dll</HintPath>
+    <Reference Include="Owin.Security.Providers.LinkedIn, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.Owin.Security.Providers.1.3.1\lib\net45\Owin.Security.Providers.LinkedIn.dll</HintPath>
     </Reference>
     <Reference Include="payflow_dotNET, Version=4.3.1.0, Culture=neutral, PublicKeyToken=14aa1e8d77f2a97c, processorArchitecture=MSIL">
       <HintPath>..\packages\payflow_dotNET.4.3.1.0\lib\payflow_dotNET.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine, Version=3.0.8.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net451\PayPal.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.0.8.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a">
       <HintPath>..\packages\Sitefinity.RazorEngine.3.0.8.0\lib\net40\RazorEngine.dll</HintPath>
     </Reference>
     <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorGenerator.Mvc.2.3.12\lib\net40\RazorGenerator.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="RazorGenerator.Templating, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+    <Reference Include="RazorGenerator.Templating, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4">
       <HintPath>..\packages\RazorGenerator.Templating.2.1.1\lib\net40\RazorGenerator.Templating.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.5.1.0\lib\net45\ServiceStack.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.5.7.0\lib\net45\ServiceStack.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Aws, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Aws.5.1.0\lib\net45\ServiceStack.Aws.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Aws.5.7.0\lib\net45\ServiceStack.Aws.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Caching.Memcached, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Caching.Memcached.5.1.0\lib\net45\ServiceStack.Caching.Memcached.dll</HintPath>
+    <Reference Include="ServiceStack.Caching.Memcached, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Caching.Memcached.5.7.0\lib\net45\ServiceStack.Caching.Memcached.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Client.5.1.0\lib\net45\ServiceStack.Client.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Client.5.7.0\lib\net45\ServiceStack.Client.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Common.5.1.0\lib\net45\ServiceStack.Common.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Common.5.7.0\lib\net45\ServiceStack.Common.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Interfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Interfaces.5.1.0\lib\net45\ServiceStack.Interfaces.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Interfaces.5.7.0\lib\net45\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.OrmLite, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.OrmLite.5.1.0\lib\net45\ServiceStack.OrmLite.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.OrmLite.5.7.0\lib\net45\ServiceStack.OrmLite.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.OrmLite.SqlServer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.OrmLite.SqlServer.5.1.0\lib\net45\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.OrmLite.SqlServer.5.7.0\lib\net45\ServiceStack.OrmLite.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Redis, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Redis.5.1.0\lib\net45\ServiceStack.Redis.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Redis.5.7.0\lib\net45\ServiceStack.Redis.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Server, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Server.5.1.0\lib\net45\ServiceStack.Server.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Server.5.7.0\lib\net45\ServiceStack.Server.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Text, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Text.5.1.0\lib\net45\ServiceStack.Text.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Text.5.7.0\lib\net45\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System.Activities" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -382,18 +402,28 @@
       <HintPath>..\packages\System.Linq.Expressions.4.1.0\lib\net463\System.Linq.Expressions.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Reflection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Reflection.4.1.0\lib\net462\System.Reflection.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.Extensions.4.1.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
       <Private>True</Private>
@@ -406,6 +436,7 @@
     <Reference Include="System.Spatial, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Spatial.5.8.4\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading" />
     <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
@@ -416,12 +447,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Extensions.Design" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
@@ -438,353 +467,357 @@
     <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.OData, Version=6.1.0.10907, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.OData.6.1.0\lib\net45\System.Web.OData.dll</HintPath>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows, Version=5.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+    <Reference Include="System.Windows, Version=5.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
       <HintPath>..\packages\System.Windows.5.0.61118.0\lib\System.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.DEC.Common.Encryption.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca7c0b9c77ee15aa, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.DEC.Common.Encryption.Contract.dll</HintPath>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.DEC.Common.Encryption.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca7c0b9c77ee15aa">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.DEC.Common.Encryption.Contract.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.DigitalExperienceCloud.Client, Version=2.1.13.17135, Culture=neutral, PublicKeyToken=241a23cf8b6c74c1, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.DigitalExperienceCloudConnector.11.1.6800\lib\net471\Telerik.DigitalExperienceCloud.Client.dll</HintPath>
+    <Reference Include="Telerik.DigitalExperienceCloud.Client, Version=3.0.2.33180, Culture=neutral, PublicKeyToken=241a23cf8b6c74c1">
+      <HintPath>..\packages\Telerik.Sitefinity.DigitalExperienceCloudConnector.12.2.7221\lib\net472\Telerik.DigitalExperienceCloud.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Octopus.Validation, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.Octopus.Validation.dll</HintPath>
+    <Reference Include="Telerik.Octopus.Validation, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.Octopus.Validation.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess, Version=2018.0.911.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.911.1\lib\net40\Telerik.OpenAccess.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2018.0.911.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.911.1\lib\net40\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.35.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.40.Extensions, Version=2018.0.911.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.911.1\lib\net40\Telerik.OpenAccess.40.Extensions.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.40.Extensions, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.40.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.DataAdapter, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.OpenAccess.DataAdapter.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.DataAdapter, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.OpenAccess.DataAdapter.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.DataAdapter.OpenAccess, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.OpenAccess.DataAdapter.OpenAccess.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.DataAdapter.OpenAccess, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.OpenAccess.DataAdapter.OpenAccess.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.DataAdapter.SalesForce, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.OpenAccess.DataAdapter.SalesForce.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.DataAdapter.SalesForce, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.OpenAccess.DataAdapter.SalesForce.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.DataAdapter.SharePoint, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.OpenAccess.DataAdapter.SharePoint.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.DataAdapter.SharePoint, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.OpenAccess.DataAdapter.SharePoint.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.DataSource.SharePoint, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.OpenAccess.DataSource.SharePoint.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.DataSource.SharePoint, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.OpenAccess.DataSource.SharePoint.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.DataSource.SyncDB, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.912.2\lib\Telerik.OpenAccess.DataSource.SyncDB.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.DataSource.SyncDB, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.Octopus.2018.0.1127.2\lib\net40\Telerik.OpenAccess.DataSource.SyncDB.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.Runtime, Version=2018.0.911.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.911.1\lib\net40\Telerik.OpenAccess.Runtime.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.Runtime, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2018.0.1127.1\lib\net40\Telerik.OpenAccess.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.Sync, Version=2018.0.912.2, Culture=neutral, PublicKeyToken=563ab8ea49361608, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.OpenAccess.11.1.6800\lib\net471\Telerik.OpenAccess.Sync.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.Sync, Version=2018.0.1127.2, Culture=neutral, PublicKeyToken=563ab8ea49361608">
+      <HintPath>..\packages\Telerik.Sitefinity.OpenAccess.12.2.7221\lib\net472\Telerik.OpenAccess.Sync.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.OpenAccess.Web, Version=2018.0.911.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.OpenAccess.11.1.6800\lib\net471\Telerik.OpenAccess.Web.dll</HintPath>
+    <Reference Include="Telerik.OpenAccess.Web, Version=2018.0.1127.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>..\packages\Telerik.Sitefinity.OpenAccess.12.2.7221\lib\net472\Telerik.OpenAccess.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Reporting, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Reporting, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
       <HintPath>..\packages\Telerik.Sitefinity.Reporting.Controls.7.1.13.612\lib\net40\Telerik.Reporting.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Reporting.OpenXmlRendering, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Reporting.OpenXmlRendering, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
       <HintPath>..\packages\Telerik.Sitefinity.Reporting.Controls.7.1.13.612\lib\net40\Telerik.Reporting.OpenXmlRendering.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Reporting.XpsRendering, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
       <HintPath>..\packages\Telerik.Sitefinity.Reporting.Controls.7.1.13.612\lib\net40\Telerik.Reporting.XpsRendering.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.ReportViewer.WebForms, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=7.1.13.612, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
       <HintPath>..\packages\Telerik.Sitefinity.Reporting.Controls.7.1.13.612\lib\net40\Telerik.ReportViewer.WebForms.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.11.1.6800\lib\net471\Telerik.Sitefinity.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.ABTesting, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.ABTesting.11.1.6800\lib\net471\Telerik.Sitefinity.ABTesting.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.ABTesting, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.ABTesting.12.2.7221\lib\net472\Telerik.Sitefinity.ABTesting.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.AdminBridge, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.AdminBridge.11.1.6800\lib\net471\Telerik.Sitefinity.AdminBridge.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.AdminBridge, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.AdminBridge.12.2.7221\lib\net472\Telerik.Sitefinity.AdminBridge.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Amazon, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Amazon.11.1.6800\lib\net471\Telerik.Sitefinity.Amazon.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Amazon, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Amazon.12.2.7221\lib\net472\Telerik.Sitefinity.Amazon.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.AmazonCloudSearch, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.AmazonCloudSearch.11.1.6800\lib\net471\Telerik.Sitefinity.AmazonCloudSearch.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.AmazonCloudSearch, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.AmazonCloudSearch.12.2.7221\lib\net472\Telerik.Sitefinity.AmazonCloudSearch.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Analytics.Server.Infrastructure, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Analytics.11.1.6800\lib\net471\Telerik.Sitefinity.Analytics.Server.Infrastructure.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Analytics.Server.Infrastructure, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Analytics.12.2.7221\lib\net472\Telerik.Sitefinity.Analytics.Server.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Audit.Elasticsearch, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Audit.Elasticsearch.11.1.6800\lib\net471\Telerik.Sitefinity.Audit.Elasticsearch.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Audit.Elasticsearch, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Audit.Elasticsearch.12.2.7221\lib\net472\Telerik.Sitefinity.Audit.Elasticsearch.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.AuditTrail, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.AuditTrail.11.1.6800\lib\net471\Telerik.Sitefinity.AuditTrail.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.AuditTrail, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.AuditTrail.12.2.7221\lib\net472\Telerik.Sitefinity.AuditTrail.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Authentication, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.Authentication.11.1.6800\lib\net471\Telerik.Sitefinity.Authentication.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Authentication, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.Authentication.12.2.7221\lib\net472\Telerik.Sitefinity.Authentication.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Azure, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Azure.11.1.6800\lib\net471\Telerik.Sitefinity.Azure.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Azure, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Azure.12.2.7221\lib\net472\Telerik.Sitefinity.Azure.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Connectivity, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Connectivity.11.1.6800\lib\net471\Telerik.Sitefinity.Connectivity.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Connectivity, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Connectivity.12.2.7221\lib\net472\Telerik.Sitefinity.Connectivity.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.ContentModules, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.11.1.6800\lib\net471\Telerik.Sitefinity.ContentModules.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.ContentModules, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Content.12.2.7221\lib\net472\Telerik.Sitefinity.ContentModules.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Dashboard, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Dashboard.11.1.6800\lib\net471\Telerik.Sitefinity.Dashboard.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Dashboard, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Dashboard.12.2.7221\lib\net472\Telerik.Sitefinity.Dashboard.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.DataIntelligenceConnector, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.DigitalExperienceCloudConnector.11.1.6800\lib\net471\Telerik.Sitefinity.DataIntelligenceConnector.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.DataIntelligenceConnector, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.DigitalExperienceCloudConnector.12.2.7221\lib\net472\Telerik.Sitefinity.DataIntelligenceConnector.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Diagnostics, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Diagnostics.11.1.6800\lib\net471\Telerik.Sitefinity.Diagnostics.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Diagnostics, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Diagnostics.12.2.7221\lib\net472\Telerik.Sitefinity.Diagnostics.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Ecommerce, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.11.1.6800\lib\net471\Telerik.Sitefinity.Ecommerce.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Ecommerce, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <HintPath>..\packages\Progress.Sitefinity.Ecommerce.12.2.7221\lib\net472\Telerik.Sitefinity.Ecommerce.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.EloquaConnector, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.EloquaConnector.11.1.6800\lib\net471\Telerik.Sitefinity.EloquaConnector.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.EloquaConnector, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.EloquaConnector.12.2.7221\lib\net472\Telerik.Sitefinity.EloquaConnector.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Forums, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.11.1.6800\lib\net471\Telerik.Sitefinity.Forums.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Forums, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <HintPath>..\packages\Progress.Sitefinity.Forums.12.2.7221\lib\net472\Telerik.Sitefinity.Forums.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Blogs, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Blogs.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Blogs, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Blogs.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Card, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Card.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Card, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Card.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Comments, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Comments.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Comments, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Comments.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.ContentBlock, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.ContentBlock.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.ContentBlock, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.ContentBlock.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Data, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Data.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Data, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.DynamicContent, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.DynamicContent.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.DynamicContent, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.DynamicContent.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.EmailCampaigns, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.EmailCampaigns.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.EmailCampaigns, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.EmailCampaigns.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Events, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Events.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Events, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Events.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Forms, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Forms.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Forms, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Identity, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Identity.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Identity, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Identity.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.InlineClientAssets, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.InlineClientAssets.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.InlineClientAssets, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.InlineClientAssets.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Lists, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Lists.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Lists, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Lists.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Media, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Media.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Media, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Media.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Navigation, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Navigation.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Navigation, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Navigation.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.News, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.News.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.News, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.News.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Publishing, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Publishing.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Publishing, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Publishing.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Search, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Search.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Search, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Search.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Frontend.Taxonomies, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Feather.11.1.6800\lib\net471\Telerik.Sitefinity.Frontend.Taxonomies.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Frontend.Taxonomies, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Feather.12.2.7221\lib\net472\Telerik.Sitefinity.Frontend.Taxonomies.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.MarketoConnector, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.MarketoConnector.11.1.6800\lib\net471\Telerik.Sitefinity.MarketoConnector.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.HubSpotConnector, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <HintPath>..\packages\Progress.Sitefinity.HubSpotConnector.12.2.7221\lib\net472\Telerik.Sitefinity.HubSpotConnector.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.MobileFormats, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.MobileFormats.11.1.6800\lib\net471\Telerik.Sitefinity.MobileFormats.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.MarketoConnector, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.MarketoConnector.12.2.7221\lib\net472\Telerik.Sitefinity.MarketoConnector.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Model, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.11.1.6800\lib\net471\Telerik.Sitefinity.Model.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.MobileFormats, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.MobileFormats.12.2.7221\lib\net472\Telerik.Sitefinity.MobileFormats.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Mvc, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Mvc.11.1.6800\lib\net471\Telerik.Sitefinity.Mvc.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Model, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Packaging, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Packaging.11.1.6800\lib\net471\Telerik.Sitefinity.Packaging.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Mvc, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Mvc.12.2.7221\lib\net472\Telerik.Sitefinity.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Personalization, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Personalization.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Packaging, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Packaging.12.2.7221\lib\net472\Telerik.Sitefinity.Packaging.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Personalization.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Personalization.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Personalization, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Personalization.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.PrecompiledPages.Backend.0, Version=11.1.6800.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.PrecompiledPages.Backend.11.1.6800\lib\net471\Telerik.Sitefinity.PrecompiledPages.Backend.0.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Personalization.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.2.7221\lib\net472\Telerik.Sitefinity.Personalization.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.PrecompiledTemplates, Version=11.1.6800.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.PrecompiledTemplates.11.1.6800\lib\net471\Telerik.Sitefinity.PrecompiledTemplates.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.PrecompiledPages.Backend.0, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Telerik.Sitefinity.PrecompiledPages.Backend.12.2.7221\lib\net472\Telerik.Sitefinity.PrecompiledPages.Backend.0.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.RecurrentRules, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.11.1.6800\lib\net471\Telerik.Sitefinity.RecurrentRules.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.PrecompiledTemplates, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Telerik.Sitefinity.PrecompiledTemplates.12.2.7221\lib\net472\Telerik.Sitefinity.PrecompiledTemplates.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.RecycleBin, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.RecycleBin.11.1.6800\lib\net471\Telerik.Sitefinity.RecycleBin.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.RecurrentRules, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Content.12.2.7221\lib\net472\Telerik.Sitefinity.RecurrentRules.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Resources">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.11.1.6800\lib\net471\Telerik.Sitefinity.Resources.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.RecycleBin, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.RecycleBin.12.2.7221\lib\net472\Telerik.Sitefinity.RecycleBin.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.SalesForceConnector, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.SalesForceConnector.11.1.6800\lib\net471\Telerik.Sitefinity.SalesForceConnector.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Resources, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Resources.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Search, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Search.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.SalesForceConnector, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.SalesForceConnector.12.2.7221\lib\net472\Telerik.Sitefinity.SalesForceConnector.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Search.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Search.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Search, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Search.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Comments, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Comments.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Search.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.2.7221\lib\net472\Telerik.Sitefinity.Search.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Comments.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Comments.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Comments, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Comments.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Documents, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Documents.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Comments.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Comments.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Documents.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Documents.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Documents, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Documents.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Events, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Events.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Documents.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Documents.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Notifications, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Notifications.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Events, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Events.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Notifications.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Notifications.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Notifications, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Notifications.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.RecycleBin, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.RecycleBin.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Notifications.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Notifications.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.RecycleBin.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.RecycleBin.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.RecycleBin, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Services.RecycleBin.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Statistics, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Statistics.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.RecycleBin.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.RecycleBin.12.2.7221\lib\net472\Telerik.Sitefinity.Services.RecycleBin.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Statistics.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.11.1.6800\lib\net471\Telerik.Sitefinity.Services.Statistics.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Statistics, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Statistics.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.SharepointConnector, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.SharepointConnector.11.1.6800\lib\net471\Telerik.Sitefinity.SharepointConnector.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Services.Statistics.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.ServicesImpl.12.2.7221\lib\net472\Telerik.Sitefinity.Services.Statistics.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.SitemapGenerator, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.SitemapGenerator.11.1.6800\lib\net471\Telerik.Sitefinity.SitemapGenerator.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.SharepointConnector, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.SharepointConnector.12.2.7221\lib\net472\Telerik.Sitefinity.SharepointConnector.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.SiteSync, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.SiteSync.11.1.6800\lib\net471\Telerik.Sitefinity.SiteSync.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.SitemapGenerator, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.SitemapGenerator.12.2.7221\lib\net472\Telerik.Sitefinity.SitemapGenerator.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.SiteSync.Impl, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.SiteSync.11.1.6800\lib\net471\Telerik.Sitefinity.SiteSync.Impl.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.SiteSync, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.SiteSync.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Translations, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Translations.11.1.6800\lib\net471\Telerik.Sitefinity.Translations.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.SiteSync.Impl, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.SiteSync.12.2.7221\lib\net472\Telerik.Sitefinity.SiteSync.Impl.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Utilities, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.11.1.6800\lib\net471\Telerik.Sitefinity.Utilities.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Translations, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Translations.12.2.7221\lib\net472\Telerik.Sitefinity.Translations.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.Web.Api, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Sitefinity.Web.Services.11.1.6800\lib\net471\Telerik.Sitefinity.Web.Api.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Utilities, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.12.2.7221\lib\net472\Telerik.Sitefinity.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.WebSecurity, Version=11.1.6800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.WebSecurity.11.1.6800\lib\net471\Telerik.Sitefinity.WebSecurity.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.Web.Api, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Telerik.Sitefinity.Web.Services.12.2.7221\lib\net472\Telerik.Sitefinity.Web.Api.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.Design, Version=2018.3.910.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Web.UI.2018.3.910.40\lib\net40\Telerik.Web.Design.dll</HintPath>
+    <Reference Include="Telerik.Sitefinity.WebSecurity, Version=12.2.7221.0, Culture=neutral, PublicKeyToken=b28c218413bdf563">
+      <HintPath>..\packages\Progress.Sitefinity.WebSecurity.12.2.7221\lib\net472\Telerik.Sitefinity.WebSecurity.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI, Version=2018.3.910.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Web.UI.2018.3.910.40\lib\net40\Telerik.Web.UI.dll</HintPath>
+    <Reference Include="Telerik.Web.Design, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4">
+      <HintPath>..\packages\Telerik.Web.UI.2019.3.917.45\lib\net45\Telerik.Web.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI.Skins, Version=2018.3.910.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Web.UI.2018.3.910.40\lib\net40\Telerik.Web.UI.Skins.dll</HintPath>
+    <Reference Include="Telerik.Web.UI, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4">
+      <HintPath>..\packages\Telerik.Web.UI.2019.3.917.45\lib\net45\Telerik.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls, Version=2018.3.911.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Controls.2018.3.911.45\lib\net45\Telerik.Windows.Controls.dll</HintPath>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4">
+      <HintPath>..\packages\Telerik.Web.UI.2019.3.917.45\lib\net45\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Data, Version=2018.3.911.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Data.2018.3.911.45\lib\net45\Telerik.Windows.Data.dll</HintPath>
+    <Reference Include="Telerik.Windows.Controls, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Controls.2019.3.917.45\lib\net45\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents, Version=2018.3.911.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Documents.2018.3.911.45\lib\net45\Telerik.Windows.Documents.dll</HintPath>
+    <Reference Include="Telerik.Windows.Data, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Data.2019.3.917.45\lib\net45\Telerik.Windows.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Documents.Core.2018.3.911.45\lib\net45\Telerik.Windows.Documents.Core.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Documents.2019.3.917.45\lib\net45\Telerik.Windows.Documents.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Documents.Fixed.2018.3.911.45\lib\net45\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Documents.Core.2019.3.903.40\lib\net45\Telerik.Windows.Documents.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Documents.Flow.2018.3.911.45\lib\net45\Telerik.Windows.Documents.Flow.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Documents.Fixed.2019.3.903.40\lib\net45\Telerik.Windows.Documents.Fixed.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html, Version=2018.3.911.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Documents.FormatProviders.Html.2018.3.911.45\lib\net45\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Documents.Flow.2019.3.903.40\lib\net45\Telerik.Windows.Documents.Flow.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml, Version=2018.3.911.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Documents.FormatProviders.OpenXml.2018.3.911.45\lib\net45\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Documents.FormatProviders.Html.2019.3.917.45\lib\net45\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf, Version=2018.3.911.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Documents.FormatProviders.Rtf.2018.3.911.45\lib\net45\Telerik.Windows.Documents.FormatProviders.Rtf.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Documents.FormatProviders.OpenXml.2019.3.917.45\lib\net45\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Zip, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telerik.Windows.Zip.2018.3.911.45\lib\net45\Telerik.Windows.Zip.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf, Version=2019.3.917.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Documents.FormatProviders.Rtf.2019.3.917.45\lib\net45\Telerik.Windows.Documents.FormatProviders.Rtf.dll</HintPath>
     </Reference>
-    <Reference Include="Twitterizer2, Version=2.4.1.27318, Culture=neutral, PublicKeyToken=69d1469eac671567, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Zip, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7">
+      <HintPath>..\packages\Telerik.Windows.Zip.2019.3.903.40\lib\net45\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Twitterizer2, Version=2.4.1.27318, Culture=neutral, PublicKeyToken=69d1469eac671567">
       <HintPath>..\packages\Telerik.Sitefinity.Twitterizer.2.4.1\lib\net40\Twitterizer2.dll</HintPath>
     </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
+    <Reference Include="Payflow_dotNET, Version=4.3.1.0, Culture=neutral, PublicKeyToken=14aa1e8d77f2a97c">
+      <HintPath>..\packages\payflow_dotNET.4.3.1.0\lib\payflow_dotNET.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminApp\app.dfb9aa5a50bb4d672a87.bundle.js" />
+    <Content Include="AdminApp\app.f2bcc5d4c7ad763fc6a0.bundle.js" />
     <Content Include="AdminApp\assets\auth\oidc-client.min.js" />
     <Content Include="AdminApp\assets\auth\silent-renew.html" />
     <Content Include="AdminApp\assets\auth\silent-renew.js" />
@@ -805,6 +838,8 @@
     <Content Include="AdminApp\assets\icons\mstile-150x150.png" />
     <Content Include="AdminApp\assets\icons\mstile-310x310.png" />
     <Content Include="AdminApp\assets\icons\mstile-70x70.png" />
+    <Content Include="AdminApp\assets\images\ProgressSitefinityCms.min.svg" />
+    <Content Include="AdminApp\assets\images\sfLoadingData.gif" />
     <Content Include="AdminApp\assets\js\kendo-editor\kendo.custom.min.js" />
     <Content Include="AdminApp\assets\js\monaco-editor\vs\base\worker\workerMain.js" />
     <Content Include="AdminApp\assets\js\monaco-editor\vs\basic-languages\src\bat.js" />
@@ -868,9 +903,11 @@
     <Content Include="AdminApp\assets\js\monaco-editor\vs\language\typescript\src\worker.js" />
     <Content Include="AdminApp\assets\js\monaco-editor\vs\loader.js" />
     <Content Include="AdminApp\DecExtensions\dec-iris.extensions.bundle.js" />
+    <Content Include="AdminApp\elements.05d728b01f16488147e8.bundle.js" />
     <Content Include="AdminApp\favicon.ico" />
     <Content Include="AdminApp\index.html" />
-    <Content Include="AdminApp\vendors.adabf2513eb2cbf9bac2.bundle.js" />
+    <Content Include="AdminApp\vendors.066b73fdc96eb4ea4343.bundle.js" />
+    <Content Include="App_Data\GeoLocation\citieslist.txt" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
     <Content Include="App_Data\RadCaptcha\2.wav" />
@@ -932,45 +969,6 @@
     <Content Include="ResourcePackages\Bootstrap4\GridSystem\Templates\grid-8+4.html" />
     <Content Include="ResourcePackages\Bootstrap4\GridSystem\Templates\grid-9+3.html" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Scripts\Navigation\pills.js" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\css\main.css" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\css\main.min.css" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.svg" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.svg" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\images\sprite.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\icons\file.svg" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\icons\no-image.svg" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\blogger.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\comment.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\delicious.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\digg.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\email.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\facebook.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\feed.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\google.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\linkedin.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\mailto.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\myspace.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\reddit.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\remove.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\stumble-upon.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\tumblr.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\images\sprite\twitter.png" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\feather-icons.css" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\sf-icon-font.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\container.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-12.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-2+3+2+3+2.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-3+3+3+3.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-3+6+3.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-3+9.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-4+4+4.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-4+8.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-6+6.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-8+4.html" />
-    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-9+3.html" />
-    <Content Include="ResourcePackages\Bootstrap\gruntfile.js" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Scripts\Navigation\pills.js" />
     <Content Include="Sitefinity\Default.aspx" />
     <Content Include="Sitefinity\Public\Services\Ecommerce\Order\CartOrder.svc" />
     <Content Include="Sitefinity\Public\Services\LoadBalancing\AzureSystemWebService.svc" />
@@ -1091,164 +1089,15 @@
     <Content Include="App_Data\RadSpell\fr-FR.tdf" />
     <Content Include="App_Data\RadSpell\en-US.tdf" />
     <Content Include="App_Data\RadSpell\de-DE.tdf" />
+    <Content Include="App_Data\GeoLocation\GeoLite2-City.mmdb" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>
     </Content>
-    <Content Include="ResourcePackages\Bootstrap\README.md" />
-    <Content Include="ResourcePackages\Bootstrap\razorgenerator.directives" />
-    <Content Include="ResourcePackages\Bootstrap\package.json" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Video\Video.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\VideoGallery\List.VideoGallery.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\VideoGallery\List.OverlayGallery.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\VideoGallery\Detail.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UsersList\List.UsersList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UsersList\Detail.UserDetails.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UnsubscribeForm\UnsubscribeFormByLink.UnsubscribeMessage.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\TextField\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\TextField\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SubscribeForm\SubscribeForm.SubscribeForm.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SubmitButton\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\StyleSheet\Index.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SiteSelector\SiteSelector.SiteLinks.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SiteSelector\SiteSelector.DropDownMenu.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SearchResults\SearchResults.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\SearchBox\SearchBox.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Reviews\ReviewsCount.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Reviews\Reviews.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Registration\Registration.RegistrationForm.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\Read.ProfilePreview.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\Edit.ProfileEdit.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Profile\ConfirmPassword.ProfileEdit.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ParagraphTextField\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ParagraphTextField\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\PageBreak\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\News\List.NewsList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\News\Detail.DetailPage.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Vertical.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Tabs.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Sitemap.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Pills.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.Horizontal.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\Dropdown.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\NavigationField\Read.ProgressBar.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\NavigationField\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\MultipleChoiceField\Write.Default_Inline.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\MultipleChoiceField\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\MultipleChoiceField\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginStatus\LoginStatus.LoginName.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginStatus\LoginStatus.LoginButton.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\LoginForm.LoginForm.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LoginForm\ForgotPassword.ForgottenPassword.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.SimpleList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.PagesList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.ExpandedList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.ExpandableList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\List.AnchorList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Lists\Detail.DetailPage.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Layouts\default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LanguageSelector\LanguageSelector.LanguageLinks.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\JavaScript\Index.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Image\Image.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.SimpleList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.OverlayGallery.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\List.ImageGallery.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ImageGallery\Detail.DetailPage.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\HierarchicalTaxonomy\HierarchicalTaxonomy.CategoriesList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\HiddenField\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\HiddenField\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Form\Index.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Form\Form.SubmitResultView.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FlatTaxonomy\FlatTaxonomy.TagCloud.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FlatTaxonomy\FlatTaxonomy.SimpleList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FlatTaxonomy\FlatTaxonomy.CloudList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\FileField\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Feed\Feed.FeedLink.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Event\List.EventsList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Event\Detail.EventDetails.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\EventScheduler\List.Calendar.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\EventScheduler\Detail.EventDetails.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\EmbedCode\Index.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DropdownListField\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DropdownListField\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Document\DocumentLink.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DocumentsList\List.DocumentsTable.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DocumentsList\List.DocumentsList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\DocumentsList\Detail.DocumentDetails.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ContentBlock\Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Comments\CommentsCount.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Comments\Comments.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\CheckboxesField\Write.Default_Inline.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\CheckboxesField\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\CheckboxesField\Read.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Card\Card.Simple.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Card\Card.Hero.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Card\Card.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Captcha\Write.Default.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Breadcrumb\Breadcrumb.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Blog\List.BlogList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Blog\Detail.DetailPage.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\BlogPost\List.BlogPostList.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\BlogPost\Detail.DetailPage.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\MVC\Views\AccountActivation\AccountActivation.AccountActivation.cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\jsfiles.json" />
-    <Content Include="ResourcePackages\Bootstrap\csslint.json" />
-    <Content Include="ResourcePackages\Bootstrap\client-components\fields\html-field\sf-html-field.sf-cshtml" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\taxonomies\_sf-tags.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\siteSelector\_sf-site-selector.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\searchResults\_sf-search-results.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\searchBox\_sf-search-box.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\profile\_sf-profile.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\navigation\_stacked.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\navigation\_sitemap.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\navigation\_navbar.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\media\_sf-media.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\login\_sf-login.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\list\_sf-list.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\languageSelector\_sf-language-selector.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\gallery\_gallery.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\form\sf-form.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\formNavigation\sf-form-nav.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\fileField\sf-file-field.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\feed\_sf-feed.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\event\_sf-event.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\documentList\_sf-document-list.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\contentBlock\_sf-content-block.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\comments\_sf-ratings.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\comments\_sf-comments.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\widgets\code\_sf-code.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\utilities\_text.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\utilities\_spacing.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\tools\_mixins.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\tools\_bootstrap-mixins.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\sitefinity.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\settings\_variables.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\sprite\_sf-sprite.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\sprite\sf-sprite.mustache" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\longtext\_longtext.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\loading\_loading.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\_sf-icon-font.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\_icons.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\components\icons\feather-icons.json" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\bootstrap\_type.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\base\_rtl.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\sitefinity\sass\base\_pre.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\project\sass\main.scss" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.woff" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.ttf" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.eot" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.woff" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
-    <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\bootstrap\glyphicons-halflings-regular.eot" />
     <Content Include="ResourcePackages\Bootstrap4\README.md" />
     <Content Include="ResourcePackages\Bootstrap4\razorgenerator.directives" />
     <Content Include="ResourcePackages\Bootstrap4\package.json" />
+    <Content Include="ResourcePackages\Bootstrap4\package-lock.json" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\Video\Video.Default.cshtml" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\VideoGallery\List.VideoGallery.cshtml" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\VideoGallery\List.OverlayGallery.cshtml" />
@@ -1326,6 +1175,8 @@
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\EventScheduler\List.Calendar.cshtml" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\EventScheduler\Detail.EventDetails.cshtml" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\EmbedCode\Index.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap4\MVC\Views\EmailTextField\Write.Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap4\MVC\Views\EmailTextField\Read.Default.cshtml" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\DropdownListField\Write.Default.cshtml" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\DropdownListField\Read.Default.cshtml" />
     <Content Include="ResourcePackages\Bootstrap4\MVC\Views\Document\DocumentLink.cshtml" />
@@ -1392,6 +1243,7 @@
     <Content Include="ResourcePackages\Bootstrap4\assets\src\sitefinity\sass\base\_media.scss" />
     <Content Include="ResourcePackages\Bootstrap4\assets\src\sitefinity\sass\base\_list.scss" />
     <Content Include="ResourcePackages\Bootstrap4\assets\src\project\sass\main.scss" />
+    <Content Include="ResourcePackages\Bootstrap4\assets\src\project\sass\adminapp\editor.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1400,15 +1252,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\AWSSDK.DynamoDBv2.3.3.7.2\analyzers\dotnet\cs\AWSSDK.DynamoDBv2.CodeAnalysis.dll" />
-    <Analyzer Include="..\packages\AWSSDK.S3.3.3.18.1\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
-    <Analyzer Include="..\packages\AWSSDK.SQS.3.3.3.6\analyzers\dotnet\cs\AWSSDK.SQS.CodeAnalysis.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Telerik.Sitefinity.MailchimpConnector\Telerik.Sitefinity.MailchimpConnector.csproj">
       <Project>{b943491d-46ec-456b-bb0c-71f253379cfb}</Project>
       <Name>Telerik.Sitefinity.MailchimpConnector</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\AWSSDK.CloudSearch.3.3.0.83\analyzers\dotnet\cs\AWSSDK.CloudSearch.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.CloudSearchDomain.3.3.0.83\analyzers\dotnet\cs\AWSSDK.CloudSearchDomain.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.DynamoDBv2.3.3.101.70\analyzers\dotnet\cs\AWSSDK.DynamoDBv2.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.S3.3.3.104.31\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.SQS.3.3.102.11\analyzers\dotnet\cs\AWSSDK.SQS.CodeAnalysis.dll" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -1441,12 +1295,12 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets'))" />
-    <Error Condition="!Exists('..\packages\Telerik.Sitefinity.Feather.11.1.6800\build\Telerik.Sitefinity.Feather.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Telerik.Sitefinity.Feather.11.1.6800\build\Telerik.Sitefinity.Feather.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Telerik.Sitefinity.Feather.12.2.7221\build\Telerik.Sitefinity.Feather.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Telerik.Sitefinity.Feather.12.2.7221\build\Telerik.Sitefinity.Feather.targets'))" />
   </Target>
   <Import Project="..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets" Condition="Exists('..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets')" />
-  <Import Project="..\packages\Telerik.Sitefinity.Feather.11.1.6800\build\Telerik.Sitefinity.Feather.targets" Condition="Exists('..\packages\Telerik.Sitefinity.Feather.11.1.6800\build\Telerik.Sitefinity.Feather.targets')" />
+  <Import Project="..\packages\Telerik.Sitefinity.Feather.12.2.7221\build\Telerik.Sitefinity.Feather.targets" Condition="Exists('..\packages\Telerik.Sitefinity.Feather.12.2.7221\build\Telerik.Sitefinity.Feather.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -121,6 +121,14 @@ namespace Telerik.Sitefinity.MailchimpConnector.Forms
             }
         }
 
+        public override int Ordinal
+        {
+            get
+            {
+                return 5;
+            }
+        }
+
         private readonly IMailchimpListProvider mailchimpListProvider;
         private readonly MailchimpConnectorConfig mailchimpConnectorConfig;
     }
