@@ -130,9 +130,6 @@
     <Reference Include="Owin.Security.Providers.LinkedIn, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <HintPath>..\packages\Progress.Sitefinity.Owin.Security.Providers.2.0.0\lib\net45\Owin.Security.Providers.LinkedIn.dll</HintPath>
     </Reference>
-    <Reference Include="Progress.Sitefinity.Renderer, Version=14.2.7900.145, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <HintPath>..\packages\Progress.Sitefinity.Renderer.14.2.7900.145\lib\netstandard2.0\Progress.Sitefinity.Renderer.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceStack, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
       <HintPath>..\packages\ServiceStack.6.0.2\lib\net472\ServiceStack.dll</HintPath>
     </Reference>
