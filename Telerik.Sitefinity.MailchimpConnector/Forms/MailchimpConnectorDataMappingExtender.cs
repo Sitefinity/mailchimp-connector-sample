@@ -19,7 +19,7 @@ namespace Telerik.Sitefinity.MailchimpConnector.Forms
         /// <inheritdoc />
         public override string Key
         {
-            get 
+            get
             {
                 return MailchimpConnectorModule.ConnectorName;
             }
@@ -40,6 +40,15 @@ namespace Telerik.Sitefinity.MailchimpConnector.Forms
             get
             {
                 return MailchimpFormsConnectorDefinitionsExtender.DependentControlsCssClass;
+            }
+        }
+
+        /// <inheritdoc />
+        public override bool HasForms
+        {
+            get
+            {
+                return true;
             }
         }
 
@@ -112,6 +121,22 @@ namespace Telerik.Sitefinity.MailchimpConnector.Forms
             return result;
         }
 
+        public override IEnumerable<string> GetForms()
+        {
+            if (!this.mailchimpConnectorConfig.Enabled)
+            {
+                return null;
+            }
+
+            IEnumerable<MailchimpList> lists = this.mailchimpListProvider.GetLists();
+            if (lists == null)
+            {
+                return null;
+            }
+
+            return lists.Select(p => p.Name);
+        }
+
         /// <inheritdoc />
         public override bool HasAutocomplete
         {
@@ -128,6 +153,8 @@ namespace Telerik.Sitefinity.MailchimpConnector.Forms
                 return 5;
             }
         }
+
+        public override string ConnectorName => MailchimpConnectorModule.ModuleName;
 
         private readonly IMailchimpListProvider mailchimpListProvider;
         private readonly MailchimpConnectorConfig mailchimpConnectorConfig;
