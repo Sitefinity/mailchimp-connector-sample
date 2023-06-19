@@ -1194,7 +1194,6 @@
     <Content Include="AdminApp\styles.bf479c9f0d9e2f46.css" />
     <Content Include="AdminApp\vendor.46d23822340fffe1.js" />
     <Content Include="AdminApp\vendor.46d23822340fffe1.js.LICENSE.txt" />
-    <Content Include="App_Data\GeoLocation\citieslist.txt" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
     <Content Include="App_Data\RadCaptcha\2.wav" />
@@ -1389,7 +1388,6 @@
     <Content Include="App_Data\RadSpell\fr-FR.tdf" />
     <Content Include="App_Data\RadSpell\en-US.tdf" />
     <Content Include="App_Data\RadSpell\de-DE.tdf" />
-    <Content Include="App_Data\GeoLocation\GeoLite2-City.mmdb" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -1693,7 +1691,7 @@
     <Analyzer Include="..\packages\AWSSDK.SQS.3.7.2.55\analyzers\dotnet\cs\AWSSDK.SQS.CodeAnalysis.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Sitefinity\Configuration\" />
+    <Folder Include="App_Data\Sitefinity\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
