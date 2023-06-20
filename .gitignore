@@ -292,3 +292,4 @@ __pycache__/
 Sitefinity.lic
 Sitefinity-MultiSite.lic
 Sitefinity-SingleSite.lic
+/SitefinityWebApp/App_Data
