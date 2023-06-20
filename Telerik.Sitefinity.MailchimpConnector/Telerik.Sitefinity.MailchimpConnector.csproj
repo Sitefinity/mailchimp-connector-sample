@@ -354,6 +354,7 @@
     <Compile Include="Client\Lists\MailchimpListClient.cs" />
     <Compile Include="Constants\FieldNameConstants.cs" />
     <Compile Include="Enums\SubscriberStatus.cs" />
+    <Compile Include="MailchimpConnectionStatus.cs" />
     <Compile Include="MailchimpConnectorResources.cs" />
     <Compile Include="MailchimpConnectorModule.cs" />
     <Compile Include="Forms\MailchimpConnectorDataMappingExtender.cs" />

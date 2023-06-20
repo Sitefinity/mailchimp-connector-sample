@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using Telerik.Sitefinity.Configuration;
+using Telerik.Sitefinity.Localization;
 using Telerik.Sitefinity.MailchimpConnector.Configuration;
 using Telerik.Sitefinity.MailchimpConnector.Web.Services;
 using Telerik.Sitefinity.Modules.Forms;
@@ -24,10 +25,19 @@ namespace Telerik.Sitefinity.MailchimpConnector.Forms
         }
 
         /// <inheritdoc/>
+        public override string ConnectorName => MailchimpConnectorModule.ModuleName;
+
+        /// <inheritdoc/>
+        public override string ConnectorTitle => Res.Get<MailchimpConnectorResources>().MailchimpConnectorPageTitle;
+
+        /// <inheritdoc/>
+        public override string SectionTitle => Res.Get<MailchimpConnectorResources>().PostDataToMailchimp;
+
+        /// <inheritdoc/>
         public override void AddConnectorSettings(ConfigElementDictionary<string, FieldDefinitionElement> sectionFields)
         {
             var mailchimpListNameField = new TextFieldDefinitionElement(sectionFields)
-            {   
+            {
                 Title = MailchimpFormsConnectorDefinitionsExtender.MailchimpListNameFieldName,
                 DataFieldName = string.Format(CultureInfo.InvariantCulture, "{0}.{1}", FormAttributesPropertyName, MailchimpFormsConnectorDefinitionsExtender.MailchimpListNameFieldName),
                 DisplayMode = FieldDisplayMode.Write,

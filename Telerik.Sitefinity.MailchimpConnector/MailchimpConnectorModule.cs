@@ -67,14 +67,14 @@ namespace Telerik.Sitefinity.MailchimpConnector
                 var configManager = ConfigManager.GetManager();
                 configManager.Provider.Executed += this.ConfigEventHandler;
 
-                if (this.MailchimpConfigHasRequiredSettings())
+                if (MailchimpConfigHasRequiredSettings())
                 {
                     this.InitializeFormDataSender();
                     this.InitializeMailchimpFormsCache();
                 }
             }
         }
-        
+
         /// <summary>
         /// This method is invoked during the unload process of an active module from Sitefinity, e.g. when a module is deactivated. For instance this method is also invoked for every active module during a restart of the application. 
         /// Typically you will use this method to unsubscribe the module from all events to which it has subscription.
@@ -173,7 +173,7 @@ namespace Telerik.Sitefinity.MailchimpConnector
             this.DisposeFormDataSender();
             this.DisposeSingletonInstances();
 
-            if (this.MailchimpConfigHasRequiredSettings())
+            if (MailchimpConfigHasRequiredSettings())
             {
                 this.InitializeFormDataSender();
                 this.InitializeMailchimpFormsCache();
@@ -230,11 +230,11 @@ namespace Telerik.Sitefinity.MailchimpConnector
         /// Checks whether the Mailchimp config has the required settings for the connector to work.
         /// </summary>
         /// <returns>Returns true if the config has the required settings for the connector. Otherwise, false.</returns>
-        private bool MailchimpConfigHasRequiredSettings()
+        internal static bool MailchimpConfigHasRequiredSettings()
         {
             MailchimpConnectorConfig mailchimpConnectorConfig = Config.Get<MailchimpConnectorConfig>();
 
-            return this.MailchimpConfigHasRequiredSettings(mailchimpConnectorConfig);
+            return MailchimpConfigHasRequiredSettings(mailchimpConnectorConfig);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace Telerik.Sitefinity.MailchimpConnector
         /// </summary>
         /// <param name="mailchimpConnectorConfig">The Mailchimp config object.</param>
         /// <returns>Returns true if the config has the required settings for the connector. Otherwise, false.</returns>
-        private bool MailchimpConfigHasRequiredSettings(MailchimpConnectorConfig mailchimpConnectorConfig)
+        private static bool MailchimpConfigHasRequiredSettings(MailchimpConnectorConfig mailchimpConnectorConfig)
         {
             if (string.IsNullOrWhiteSpace(mailchimpConnectorConfig.MailchimpApiKey))
             {
@@ -270,6 +270,8 @@ namespace Telerik.Sitefinity.MailchimpConnector
             ContainerControlledLifetimeManager mailchimpListCacheLifetimeManager = new ContainerControlledLifetimeManager();
             ObjectFactory.Container.RegisterType<IMailchimpListCache, MailchimpListCache>(mailchimpListCacheLifetimeManager);
             this.containerControlledLifetimeManagers.Add(mailchimpListCacheLifetimeManager);
+
+            ObjectFactory.Container.RegisterType<IModuleConnectionStatus, MailchimpConnectionStatus>(typeof(MailchimpConnectionStatus).FullName, new ContainerControlledLifetimeManager());
         }
 
         /// <summary>
